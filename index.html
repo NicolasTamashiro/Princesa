@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Princesa 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animação de corações flutuantes */
+        .heart {
+            position: fixed;
+            color: #ff69b4;
+            font-size: 20px;
+            animation: float 15s infinite;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header */
+        .header {
+            margin-top: 50px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .title {
+            font-size: 3em;
+            color: #d63384;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Cartão de amor */
+        .love-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: slideUp 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,182,193,0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .message {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Galeria de fotos */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .photo-item {
+            background: white;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .photo-real {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            .title {
+                font-size: 2em;
+            }
+            .love-card {
+                padding: 20px;
+            }
+            .message {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Corações flutuantes -->
+    <div class="heart" style="left: 10%; animation-delay: 0s;">💕</div>
+    <div class="heart" style="left: 20%; animation-delay: 2s;">💖</div>
+    <div class="heart" style="left: 30%; animation-delay: 4s;">💗</div>
+    <div class="heart" style="left: 40%; animation-delay: 6s;">💝</div>
+    <div class="heart" style="left: 50%; animation-delay: 8s;">💕</div>
+    <div class="heart" style="left: 60%; animation-delay: 10s;">💖</div>
+    <div class="heart" style="left: 70%; animation-delay: 12s;">💗</div>
+    <div class="heart" style="left: 80%; animation-delay: 14s;">💝</div>
+    <div class="heart" style="left: 90%; animation-delay: 16s;">💕</div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Para Minha Princesa 💕</h1>
+            <p class="subtitle">Um site para você feito com carinho</p>
+        </div>
+
+        <!-- Cartão de amor -->
+        <div class="love-card">
+            <div class="message">
+                <p>💗 Princesa,</p>
+                <p>Cada momento ao seu lado é especial, este site é um pequeno presente para mostrar o quanto você significa para mim.</p>
+                <p>Ao seu lado eu sou muito mais feliz ✨</p>
+                <p style="text-align: right; margin-top: 20px;">Com todo meu amor,<br>❤️ Seu Japones</p>
+            </div>
+        </div>
+
+        <!-- Galeria de fotos -->
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="Primeira Foto.jpg" alt="Nossa Primeira Foto" class="photo-real">
+                <p style="margin-top: 10px; color: #666; font-weight: bold;">📸 Nossa Primeira Foto</p>
+            </div>
+            <div class="photo-item">
+                <img src="Comeco.jpg" alt="Começo" class="photo-real">
+                <p style="margin-top: 10px; color: #666; font-weight: bold;">🌟 Começo</p>
+            </div>
+            <div class="photo-item">
+                <img src="Nos dois.jpg" alt="Nós dois" class="photo-real">
+                <p style="margin-top: 10px; color: #666; font-weight: bold;">💑 Nós dois</p>
+            </div>
+            <div class="photo-item">
+                <img src="Felicidade.jpg" alt="Felicidade" class="photo-real">
+                <p style="margin-top: 10px; color: #666; font-weight: bold;">🌈 Felicidade</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Criar corações dinamicamente
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = ['💕', '💖', '💗', '💝'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 20000);
+        }
+
+        // Criar corações aleatórios
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                createHeart();
+            }
+        }, 2000);
+
+        // Efeito ao clicar nas fotos
+        document.querySelectorAll('.photo-item').forEach(item => {
+            item.addEventListener('click', function () {
+                this.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        // ✅ MENSAGENS PERSONALIZADAS POR FOTO
+        const fotos = document.querySelectorAll('.photo-real');
+
+        fotos.forEach(foto => {
+            foto.addEventListener('click', function () {
+                const alt = this.getAttribute('alt');
+                if (alt === 'Nossa Primeira Foto') {
+                    alert('💕 Uma de nossas primeiras fotos! Este momento ficará para sempre em meu coração! 💕');
+                } else if (alt === 'Começo') {
+                    alert('💕 Onde tudo começou, e onde vai ser sempre lembrado! 💕');
+                } else if (alt === 'Nós dois') {
+                    alert('💕 Ao seu lado eu sou muito mais feliz! 💕');
+                } else if (alt === 'Felicidade') {
+                    alert('💕 Eu te amo muito tatuu! 💕');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
